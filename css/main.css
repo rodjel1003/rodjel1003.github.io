@@ -1,0 +1,168 @@
+html, body {
+	overflow-x: hidden
+}
+
+body {
+	overflow: hidden !important;
+	width: 100%;
+	height: 100%;
+	background-color: #0E0B16;
+}
+
+@
+-ms-viewport {
+	width: device-width;
+}
+
+#vis {
+	min-width: 100%;
+	min-height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 1;
+}
+
+#video-background {
+	min-width: 100%;
+	min-height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 0;
+}
+
+.btn {
+	/* border: solid 1px #FFFFFF; */
+	position: fixed;
+	box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+}
+
+.btn:hover {
+	 box-shadow:
+	    inset 0 0 50px #fff,
+	    inset 20px 0 80px #f0f,
+	    inset -20px 0 80px #0ff,
+	    inset 20px 0 300px #f0f,
+	    inset -20px 0 300px #0ff,
+	    0 0 50px #fff,
+	    -10px 0 80px #f0f,
+	    10px 0 80px #0ff;
+}
+
+.linked-in {
+	top: 15%;
+	left: 40%;
+}
+
+.about-me {
+	top: 50%;
+	transform: translateY(-50%);
+	left: 30%;
+}
+
+.email {
+	bottom: 15%;
+	left: 40%;
+}
+
+.facebook {
+	top: 15%;
+	right: 40%;
+}
+
+.portfolio {
+	top: 50%;
+	transform: translateY(-50%);
+	right: 30%;
+}
+
+.phone {
+	bottom: 15%;
+	right: 40%;
+}
+
+.introduction {
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	position: fixed;
+	color: #FFFFFF;
+}
+
+.glow {
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
+}
+
+@media  (min-width: 320px) and (max-width: 1024px) {
+  
+  
+	.linked-in {
+		top: 15%;
+		left: 30%;
+	}
+	
+	.about-me {
+		top: 50%;
+		transform: translateY(-50%);
+		left: 15%;
+	}
+	
+	.email {
+		bottom: 15%;
+		left: 30%;
+	}
+	
+	.facebook {
+		top: 15%;
+		right: 30%;
+	}
+	
+	.portfolio {
+		top: 50%;
+		transform: translateY(-50%);
+		right: 15%;
+	}
+	
+	.phone {
+		bottom: 15%;
+		right: 30%;
+	}
+  
+  
+}
+
+/* scrollbar design */
+::-webkit-scrollbar, #countryList::-webkit-scrollbar, #jobsModal::-webkit-scrollbar
+	{
+	width: 12px;
+}
+
+::-webkit-scrollbar-track, #countryList::-webkit-scrollbar-track,
+	#jobsModal::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+	border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb, #countryList::-webkit-scrollbar-thumb,
+	#jobsModal::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+	background-color: #E7DFDD;
+}
