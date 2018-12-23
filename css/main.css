@@ -23,6 +23,7 @@ body {
 	right: 0;
 	bottom: 0;
 	z-index: 1;
+/* 	background-color: #0E0B16; */
 }
 
 #video-background {
@@ -37,24 +38,62 @@ body {
 }
 
 .btn {
-	/* border: solid 1px #FFFFFF; */
 	position: fixed;
-	box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+/* 	box-shadow: 0 0 8px rgba(0, 0, 0, 0.6); */
+	transform: translatey(0px);
+	animation: float 6s ease-in-out infinite;
+
 }
 
-.btn:hover {
+
+@keyframes float {
+	0% {
+/* 		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6); */
+		transform: translatey(0px);
+	}
+	25% {
+/* 		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2); */
+		transform: translatey(-10px);
+	}
+	75% {
+/* 		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2); */
+		transform: translatey(10px);
+	}
+	100% {
+/* 		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6); */
+		transform: translatey(0px);
+	}
+}
+
+
+.btn:hover,
+.btn:focus,
+.btn:active {
 	 box-shadow:
 	    inset 0 0 50px #fff,
-	    inset 20px 0 80px #f0f,
-	    inset -20px 0 80px #0ff,
-	    inset 20px 0 300px #f0f,
-	    inset -20px 0 300px #0ff,
+	    inset 20px 0 80px #4717F6,
+	    inset -20px 0 80px #4717F6,
+	    inset 20px 0 300px #4717F6,
+	    inset -20px 0 300px #4717F6,
 	    0 0 50px #fff,
-	    -10px 0 80px #f0f,
-	    10px 0 80px #0ff;
+	    -10px 0 80px #4717F6,
+	    10px 0 80px #4717F6;
+	    animation-play-state: paused;
 }
 
-.linked-in {
+.primary-photo {
+	box-shadow:
+		    inset 0 0 6px #fff,
+		    inset 2px 0 10px #4717F6,
+		    inset -2px 0 10px #4717F6,
+		    inset 2px 0 37px #4717F6,
+		    inset -2px 0 37px #4717F6,
+		    0 0 6px #fff,
+		    -1px 0 10px #4717F6,
+		    1px 0 10px #4717F6;    
+}
+
+.linkedin {
 	top: 15%;
 	left: 40%;
 }
@@ -103,17 +142,17 @@ body {
 
 @-webkit-keyframes glow {
   from {
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #0E0B16, 0 0 40px #0E0B16, 0 0 50px #0E0B16, 0 0 60px #0E0B16, 0 0 70px #0E0B16;
   }
   to {
-    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+    text-shadow: 0 0 20px #fff, 0 0 30px #4717F6, 0 0 40px #4717F6, 0 0 50px #4717F6, 0 0 60px #4717F6, 0 0 70px #4717F6, 0 0 80px #4717F6;
   }
 }
 
 @media  (min-width: 320px) and (max-width: 1024px) {
   
   
-	.linked-in {
+	.linkedin {
 		top: 15%;
 		left: 30%;
 	}
