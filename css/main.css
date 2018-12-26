@@ -1,5 +1,5 @@
 html, body {
-	overflow-x: hidden
+	overflow: hidden;
 }
 
 body {
@@ -41,8 +41,14 @@ body {
 	position: fixed;
 /* 	box-shadow: 0 0 8px rgba(0, 0, 0, 0.6); */
 	transform: translatey(0px);
-	animation: float 6s ease-in-out infinite;
+	
+	transition: transform 1s;
+	border-radius: 50%;
 
+}
+
+.btn-floating {
+	animation: float 6s ease-in-out infinite;
 }
 
 
@@ -72,25 +78,27 @@ body {
 	 box-shadow:
 	    inset 0 0 50px #fff,
 	    inset 20px 0 80px #4717F6,
-	    inset -20px 0 80px #4717F6,
+	    inset -20px 0 80px #A239CA,
 	    inset 20px 0 300px #4717F6,
-	    inset -20px 0 300px #4717F6,
+	    inset -20px 0 300px #A239CA,
 	    0 0 50px #fff,
 	    -10px 0 80px #4717F6,
-	    10px 0 80px #4717F6;
+	    10px 0 80px #A239CA;
 	    animation-play-state: paused;
 }
 
 .primary-photo {
+	height: 200px !important;
+	width: 200px;
 	box-shadow:
 		    inset 0 0 6px #fff,
 		    inset 2px 0 10px #4717F6,
-		    inset -2px 0 10px #4717F6,
+		    inset -2px 0 10px #A239CA,
 		    inset 2px 0 37px #4717F6,
-		    inset -2px 0 37px #4717F6,
+		    inset -2px 0 37px #A239CA,
 		    0 0 6px #fff,
 		    -1px 0 10px #4717F6,
-		    1px 0 10px #4717F6;    
+		    1px 0 10px #A239CA;    
 }
 
 .linkedin {
@@ -100,7 +108,7 @@ body {
 
 .about-me {
 	top: 50%;
-	transform: translateY(-50%);
+/* 	transform: translateY(-50%); */
 	left: 30%;
 }
 
@@ -116,7 +124,7 @@ body {
 
 .portfolio {
 	top: 50%;
-	transform: translateY(-50%);
+	/* transform: translateY(-50%); */
 	right: 30%;
 }
 
@@ -142,12 +150,318 @@ body {
 
 @-webkit-keyframes glow {
   from {
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #0E0B16, 0 0 40px #0E0B16, 0 0 50px #0E0B16, 0 0 60px #0E0B16, 0 0 70px #0E0B16;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #0E0B16, 0 0 20px #0E0B16, 0 0 25px #0E0B16, 0 0 30px #0E0B16, 0 0 35px #0E0B16;
   }
   to {
-    text-shadow: 0 0 20px #fff, 0 0 30px #4717F6, 0 0 40px #4717F6, 0 0 50px #4717F6, 0 0 60px #4717F6, 0 0 70px #4717F6, 0 0 80px #4717F6;
+    text-shadow: 0 0 10px #fff, 0 0 15px #4717F6, 0 0 20px #4717F6, 0 0 25px #4717F6, 0 0 30px #4717F6, 0 0 35px #4717F6, 0 0 40px #4717F6;
   }
 }
+
+.glowing-container-left {
+    display: none;
+    /* position: fixed; */
+    z-index: 3;
+  
+}
+.glowing-container-left .glowing-panel {
+  position: relative;
+  height: 100vh;
+  width: 50vw;
+  padding: 50px;
+  overflow-y: auto;
+  color: white;
+  background-color: rgba(0,0,0,0.5);
+  box-shadow:
+    inset 0 0 25px #fff,
+    inset 10px 0 40px #4717F6,
+    inset -10px 0 40px #A239CA,
+    inset 10px 0 150px #4717F6,
+    inset -10px 0 150px #A239CA,
+    0 0 25px #fff,
+    -5px 0 40px #4717F6,
+    5px 0 40px #A239CA;
+  animation: glowingPanel 6s ease-in-out infinite, appearSlowlyHeight 2s ease-in-out;
+  z-index: 6;
+}
+
+.glowing-container-left .glowing-triangle-container {
+  position: relative;
+	z-index: 5;
+ 
+}
+
+.glowing-container-left .glowing-triangle {
+  height: 100vh;
+  width: 50vw;
+  opacity: 0.5;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: rgba(0,0,0,0.5);
+  clip-path: polygon(0 0, 52% 49%, 52% 51%, 0 100%);
+  box-shadow:
+    inset 0 0 400px #fff,
+    inset 160px 0 640px #4717F6,
+    inset -160px 0 640px #A239CA,
+    inset 160px 0 2400px #4717F6,
+    inset -160px 0 2400px #A239CA;
+  
+}
+
+.glowing-container-left .glowing-triangle-container2 {
+  position: absolute;
+  left: 0;
+  z-index: 4;
+}
+
+.glowing-container-left .glowing-triangle2 {
+  height: 100vh;
+  width: 100vw;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  opacity: 0.5;
+  clip-path: polygon(0 0, 72% 45%, 72% 55%, 0 100%);
+  background-color: rgba(0,0,0,0.5);
+  box-shadow:
+    inset 0 0 800px #fff,
+    inset 320px 0 1280px #4717F6,
+    inset -320px 0 1280px #A239CA,
+    inset 320px 0 4800px #4717F6,
+    inset -320px 0 4800px #A239CA;
+  
+}
+
+.glowing-container-left .circle-button {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  top: 50%;
+  left: 50%;
+  color: #ffffff;
+  transform: translate(-50%, -50%);
+  height: 56px;
+  width: 56px;
+  border-radius: 50%;
+  box-shadow:
+    inset 0 0 50px #fff,
+    inset 20px 0 80px #4717F6,
+    inset -20px 0 80px #A239CA,
+    inset 20px 0 300px #4717F6,
+    inset -20px 0 300px #A239CA,
+    0 0 50px #fff,
+    -10px 0 80px #4717F6,
+    10px 0 80px #A239CA;
+}
+
+.glowing-container-left .close-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #ffffff;
+  cursor: pointer;
+  height: 30px;
+  width: 30px;
+  border-radius: 5px;
+  border: solid 1px #FFFFFF;
+  box-shadow:
+    inset 0 0 50px #fff,
+    inset 20px 0 80px #4717F6,
+    inset -20px 0 80px #A239CA,
+    inset 20px 0 300px #4717F6,
+    inset -20px 0 300px #A239CA,
+    0 0 50px #fff,
+    -10px 0 80px #4717F6,
+    10px 0 80px #A239CA;
+}
+
+@keyframes glowingPanel {
+  0%   {
+    box-shadow:
+    inset 0 0 25px #fff,
+    inset 10px 0 40px #4717F6,
+    inset -10px 0 40px #A239CA,
+    inset 10px 0 150px #4717F6,
+    inset -10px 0 150px #A239CA,
+    0 0 25px #fff,
+    -5px 0 40px #4717F6,
+    5px 0 40px #A239CA;
+  }
+  50%  {
+    box-shadow:
+    inset 0 0 25px #fff,
+    inset 10px 0 40px #A239CA,
+    inset -10px 0 40px #4717F6,
+    inset 10px 0 150px #A239CA,
+    inset -10px 0 150px #4717F6,
+    0 0 25px #fff,
+    -5px 0 40px #A239CA,
+    5px 0 40px #4717F6;
+  }
+  100% {
+    box-shadow:
+    inset 0 0 25px #fff,
+    inset 10px 0 40px #4717F6,
+    inset -10px 0 40px #A239CA,
+    inset 10px 0 150px #4717F6,
+    inset -10px 0 150px #A239CA,
+    0 0 25px #fff,
+    -5px 0 40px #4717F6,
+    5px 0 40px #A239CA;
+  }
+}
+
+
+*::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    background-color: #4717F6;
+}
+
+*::-webkit-scrollbar {
+    width: 7px;
+    background-color: #FFF;
+}
+
+*::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #fff;
+}
+
+
+.glowing-container-right {
+  display: none;
+  z-index: 3;
+  
+  
+}
+.glowing-container-right .glowing-panel {
+  position: relative;
+  height: 100vh;
+  width: 50vw;
+  padding: 50px;
+  overflow-y: auto;
+  color: white;
+  background-color: rgba(0,0,0,0.5);
+  box-shadow:
+    inset 0 0 25px #fff,
+    inset 10px 0 40px #4717F6,
+    inset -10px 0 40px #A239CA,
+    inset 10px 0 150px #4717F6,
+    inset -10px 0 150px #A239CA,
+    0 0 25px #fff,
+    -5px 0 40px #4717F6,
+    5px 0 40px #A239CA;
+  animation: glowingPanel 6s ease-in-out infinite, appearSlowlyHeight 2s ease-in-out; 
+  z-index: 6;
+}
+
+.glowing-container-right .glowing-triangle-container {
+  position: relative;
+  z-index: 5;
+}
+
+.glowing-container-right .glowing-triangle {
+  height: 100vh;
+  width: 50vw;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  opacity: 0.5;
+  clip-path: polygon(100% 0, 52% 49%, 52% 51%, 100% 100%);
+  box-shadow:
+    inset 0 0 400px #fff,
+    inset 160px 0 640px #4717F6,
+    inset -160px 0 640px #A239CA,
+    inset 160px 0 2400px #4717F6,
+    inset -160px 0 2400px #A239CA;
+  
+}
+
+.glowing-container-right .glowing-triangle-container2 {
+  position: absolute;
+  left: 0;
+  z-index: 4;
+}
+
+.glowing-container-right .glowing-triangle2 {
+  height: 100vh;
+  width: 100vw;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  opacity: 0.5;
+  clip-path: polygon(100% 0, 28% 45%, 28% 55%, 100% 100%);
+  background-color: rgba(0,0,0,0.5);
+  box-shadow:
+    inset 0 0 800px #fff,
+    inset 320px 0 1280px #4717F6,
+    inset -320px 0 1280px #A239CA,
+    inset 320px 0 4800px #4717F6,
+    inset -320px 0 4800px #A239CA;
+}
+
+.glowing-container-right .circle-button {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  top: 50%;
+  left: 50%;
+  color: #ffffff;
+  transform: translate(-50%, -50%);
+  height: 56px;
+  width: 56px;
+  border-radius: 50%;
+  box-shadow:
+    inset 0 0 50px #fff,
+    inset 20px 0 80px #4717F6,
+    inset -20px 0 80px #A239CA,
+    inset 20px 0 300px #4717F6,
+    inset -20px 0 300px #A239CA,
+    0 0 50px #fff,
+    -10px 0 80px #4717F6,
+    10px 0 80px #A239CA;
+}
+
+.glowing-container-right .close-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #ffffff;
+  
+  height: 30px;
+  width: 30px;
+  border-radius: 5px;
+  border: solid 1px #FFFFFF;
+  box-shadow:
+    inset 0 0 50px #fff,
+    inset 20px 0 80px #4717F6,
+    inset -20px 0 80px #A239CA,
+    inset 20px 0 300px #4717F6,
+    inset -20px 0 300px #A239CA,
+    0 0 50px #fff,
+    -10px 0 80px #4717F6,
+    10px 0 80px #A239CA;
+}
+
+#phoneNumber,
+#emailValue{
+  opacity: 0;
+  cursor: default;
+}
+
+.toast {
+  color: white;
+  box-shadow:
+    inset 0 0 25px #fff,
+    inset 10px 0 40px #f0f,
+    inset -10px 0 40px #0ff,
+    inset 10px 0 150px #f0f,
+    inset -10px 0 150px #0ff,
+    0 0 25px #fff,
+    -5px 0 40px #f0f,
+    5px 0 40px #0ff;
+  animation: glowingPanel 6s ease-in-out infinite; 
+  z-index: 3;
+}
+
 
 @media  (min-width: 320px) and (max-width: 1024px) {
   
@@ -183,25 +497,14 @@ body {
 		bottom: 15%;
 		right: 30%;
 	}
+	
+	.glowing-panel {
+		width: 100vw !important;
+	}
+	
+	.glowing-triangle {
+		width: 0 !important;
+	}
   
   
-}
-
-/* scrollbar design */
-::-webkit-scrollbar, #countryList::-webkit-scrollbar, #jobsModal::-webkit-scrollbar
-	{
-	width: 12px;
-}
-
-::-webkit-scrollbar-track, #countryList::-webkit-scrollbar-track,
-	#jobsModal::-webkit-scrollbar-track {
-	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-	border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb, #countryList::-webkit-scrollbar-thumb,
-	#jobsModal::-webkit-scrollbar-thumb {
-	border-radius: 10px;
-	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
-	background-color: #E7DFDD;
 }
