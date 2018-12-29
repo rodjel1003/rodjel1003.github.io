@@ -2,7 +2,7 @@ $(".about-me")
 .on(
 		"click",
 		function() {
-			// $(".about-me").css("animation-play-state", "paused");
+//			 $(".about-me").css("animation-play-state", "paused");
 			$(".linkedin").fadeOut(1000);
 			$(".email").fadeOut(1000);
 			$(".facebook").fadeOut(1000);
@@ -11,6 +11,7 @@ $(".about-me")
 			$(".phone").fadeOut(1000);
 
 			$(".about-me").removeClass("btn-floating");
+			$(".about-me").addClass("btn-hover");
 
 			$(".about-me").css("transform", "translate(-50%, -50%)");
 			$(".about-me").animate({
@@ -37,15 +38,16 @@ $(".portfolio")
 			$(".phone").fadeOut(1000);
 
 			$(".portfolio").removeClass("btn-floating");
+			$(".portfolio").addClass("btn-hover");
 
 			$(".portfolio").css("transform", "translate(-50%, -50%)");
 			$(".portfolio").animate({
-				right : "75%",
+				left : "25%",
 				top : "50%",
 
 			}, 2000, function() {
 				// Animation complete.
-				$(".portfolio").hide();
+//				$(".portfolio").hide();
 				$(".glowing-container-right").css("display", "flex");
 			});
 		});
@@ -59,6 +61,7 @@ $(".close-button-left")
 
 
 			$(".about-me").addClass("btn-floating");
+			$(".about-me").removeClass("btn-hover");
 			$(".about-me").css("transform", "translateY(-50%)");
 			$(".glowing-container-left").css("display", "none");
 			$(".about-me").show();
@@ -84,15 +87,17 @@ $(".close-button-right")
 
 
 			$(".portfolio").addClass("btn-floating");
+			$(".portfolio").removeClass("btn-hover");
 			$(".portfolio").css("transform", "translateY(-50%)");
 			$(".glowing-container-right").css("display", "none");
 			$(".portfolio").show();
 			$(".portfolio").animate({
-				right : "30%",
+				left: "65%",
 				top : "50%",
 
 			}, 2000, function() {
 				// Animation complete.
+				$(".portfolio").css("left", "unset");
 				$(".linkedin").fadeIn(1000);
 				$(".email").fadeIn(1000);
 				$(".facebook").fadeIn(1000);
@@ -108,7 +113,7 @@ $(".phone").on("click", function() {
 	var copyPhoneNumber = document.getElementById("phoneNumber");
 	copyPhoneNumber.select();
 	document.execCommand("copy");
-	M.toast({html: "Phone Number " + copyPhoneNumber.value + " copied to clipboard", classes: 'rounded'});
+	M.toast({html: "Phone Number <span class='glow2'>&nbsp;" + copyPhoneNumber.value + "&nbsp;</span> copied to clipboard", classes: 'rounded'});
 });
 
 $(".email").on("click", function() {
@@ -116,6 +121,6 @@ $(".email").on("click", function() {
 	var copyEmailAddress = document.getElementById("emailValue");
 	copyEmailAddress.select();
 	document.execCommand("copy");
-	M.toast({html: "Email Address " + copyEmailAddress.value + " copied to clipboard", classes: 'rounded'});
+	M.toast({html: "Email Address <span class='glow2'>&nbsp;" + copyEmailAddress.value + "&nbsp;</span> copied to clipboard", classes: 'rounded'});
 });
 

@@ -44,8 +44,17 @@ body {
 	
 	transition: transform 1s;
 	border-radius: 50%;
+	
+	height: 56px !important;
+	width: 56px !important;
+	display: flex;
+	align-items: center;
 
 }
+
+/* .star {
+	clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+} */
 
 .btn-floating {
 	animation: float 6s ease-in-out infinite;
@@ -71,6 +80,45 @@ body {
 	}
 }
 
+/* @keyframes glowingButton {
+	0% {
+		box-shadow: inset 0 0 50px #fff,
+		    inset 20px 0 80px #4717F6,
+		    inset -20px 0 80px #A239CA,
+		    inset 20px 0 300px #4717F6,
+		    inset -20px 0 300px #A239CA,
+		    0 0 50px #fff,
+		    -10px 0 80px #4717F6,
+		    10px 0 80px #A239CA;
+		background-color: transparent;
+	}
+	50% {
+		box-shadow: 0 0 80px 40px #fff, 0 0 200px 100px #4717F6;
+		box-shadow: inset 0 0 50px #fff,
+		    inset 20px 0 80px #fff,
+		    inset -20px 0 80px #fff,
+		    inset 20px 0 300px #fff,
+		    inset -20px 0 300px #fff,
+		    0 0 50px #fff,
+		    -10px 0 80px #4717F6,
+		    10px 0 80px #A239CA;
+		background-color: #fff;
+	}
+	100% {
+		box-shadow: inset 0 0 50px #fff,
+		    inset 20px 0 80px #4717F6,
+		    inset -20px 0 80px #A239CA,
+		    inset 20px 0 300px #4717F6,
+		    inset -20px 0 300px #A239CA,
+		    0 0 50px #fff,
+		    -10px 0 80px #4717F6,
+		    10px 0 80px #A239CA;
+		background-color: transparent;
+	}
+} */
+
+
+
 
 .btn:hover,
 .btn:focus,
@@ -85,6 +133,18 @@ body {
 	    -10px 0 80px #4717F6,
 	    10px 0 80px #A239CA;
 	    animation-play-state: paused;
+}
+
+.btn-hover {
+	box-shadow:
+	    inset 0 0 50px #fff,
+	    inset 20px 0 80px #4717F6,
+	    inset -20px 0 80px #A239CA,
+	    inset 20px 0 300px #4717F6,
+	    inset -20px 0 300px #A239CA,
+	    0 0 50px #fff,
+	    -10px 0 80px #4717F6,
+	    10px 0 80px #A239CA;
 }
 
 .primary-photo {
@@ -148,12 +208,27 @@ body {
   animation: glow 1s ease-in-out infinite alternate;
 }
 
+.glow2 {
+  -webkit-animation: glow2 1s ease-in-out infinite alternate;
+  -moz-animation: glow2 1s ease-in-out infinite alternate;
+  animation: glow2 1s ease-in-out infinite alternate;
+}
+
 @-webkit-keyframes glow {
   from {
     text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #0E0B16, 0 0 20px #0E0B16, 0 0 25px #0E0B16, 0 0 30px #0E0B16, 0 0 35px #0E0B16;
   }
   to {
     text-shadow: 0 0 10px #fff, 0 0 15px #4717F6, 0 0 20px #4717F6, 0 0 25px #4717F6, 0 0 30px #4717F6, 0 0 35px #4717F6, 0 0 40px #4717F6;
+  }
+}
+
+@-webkit-keyframes glow2 {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 15px #4717F6, 0 0 20px #4717F6, 0 0 25px #4717F6, 0 0 30px #4717F6, 0 0 35px #4717F6, 0 0 40px #4717F6;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #fff, 0 0 25px #fff, 0 0 30px #fff, 0 0 35px #fff;
   }
 }
 
@@ -180,7 +255,7 @@ body {
     0 0 25px #fff,
     -5px 0 40px #4717F6,
     5px 0 40px #A239CA;
-  animation: glowingPanel 6s ease-in-out infinite, appearSlowlyHeight 2s ease-in-out;
+  animation: slowlyDisplayGlowingPanel 3s ease-out;
   z-index: 6;
 }
 
@@ -199,11 +274,12 @@ body {
   background-color: rgba(0,0,0,0.5);
   clip-path: polygon(0 0, 52% 49%, 52% 51%, 0 100%);
   box-shadow:
-    inset 0 0 400px #fff,
-    inset 160px 0 640px #4717F6,
-    inset -160px 0 640px #A239CA,
-    inset 160px 0 2400px #4717F6,
-    inset -160px 0 2400px #A239CA;
+    inset 0 0 600px #fff,
+    inset 240px 0 960px #4717F6,
+    inset -240px 0 960px #A239CA,
+    inset 240px 0 3600px #4717F6,
+    inset -240px 0 3600px #A239CA;
+    animation: slowlyDisplayTriangle 1.5s ease-in;
   
 }
 
@@ -227,10 +303,11 @@ body {
     inset -320px 0 1280px #A239CA,
     inset 320px 0 4800px #4717F6,
     inset -320px 0 4800px #A239CA;
+    animation: slowlyDisplayTriangle2 3s ease-in-out;
   
 }
 
-.glowing-container-left .circle-button {
+.glowing-container-left .glowing-button {
   position: absolute;
   display: flex;
   justify-content: center;
@@ -250,6 +327,7 @@ body {
     0 0 50px #fff,
     -10px 0 80px #4717F6,
     10px 0 80px #A239CA;
+    /* animation: glowingButton 6s ease-in-out infinite; */
 }
 
 .glowing-container-left .close-button {
@@ -351,7 +429,7 @@ body {
     0 0 25px #fff,
     -5px 0 40px #4717F6,
     5px 0 40px #A239CA;
-  animation: glowingPanel 6s ease-in-out infinite, appearSlowlyHeight 2s ease-in-out; 
+  animation: slowlyDisplayGlowingPanelRight 3s ease-out;
   z-index: 6;
 }
 
@@ -373,6 +451,7 @@ body {
     inset -160px 0 640px #A239CA,
     inset 160px 0 2400px #4717F6,
     inset -160px 0 2400px #A239CA;
+    animation: slowlyDisplayTriangleRight 1.5s ease-in;
   
 }
 
@@ -396,9 +475,10 @@ body {
     inset -320px 0 1280px #A239CA,
     inset 320px 0 4800px #4717F6,
     inset -320px 0 4800px #A239CA;
+    animation: slowlyDisplayTriangleRight2 3s ease-in-out;
 }
 
-.glowing-container-right .circle-button {
+.glowing-container-right .glowing-button {
   position: absolute;
   display: flex;
   justify-content: center;
@@ -418,6 +498,7 @@ body {
     0 0 50px #fff,
     -10px 0 80px #4717F6,
     10px 0 80px #A239CA;
+    /* animation: glowingButton 6s ease-in-out infinite; */
 }
 
 .glowing-container-right .close-button {
@@ -425,7 +506,7 @@ body {
   top: 0;
   right: 0;
   color: #ffffff;
-  
+  cursor: pointer;
   height: 30px;
   width: 30px;
   border-radius: 5px;
@@ -449,18 +530,84 @@ body {
 
 .toast {
   color: white;
+  background-color: transparent;
   box-shadow:
-    inset 0 0 25px #fff,
-    inset 10px 0 40px #f0f,
-    inset -10px 0 40px #0ff,
-    inset 10px 0 150px #f0f,
-    inset -10px 0 150px #0ff,
-    0 0 25px #fff,
-    -5px 0 40px #f0f,
-    5px 0 40px #0ff;
-  animation: glowingPanel 6s ease-in-out infinite; 
+    inset 0 0 6px #fff,
+    inset 2px 0 10px #4717F6,
+    inset -2px 0 10px #A239CA,
+    inset 2px 0 37px #4717F6,
+    inset -2px 0 37px #A239CA,
+    0 0 6px #fff,
+    -1px 0 10px #4717F6,
+    1px 0 10px #A239CA;
   z-index: 3;
 }
+
+@keyframes slowlyDisplayTriangle {
+  0%   {
+    clip-path: polygon(52% 49%, 52% 49%, 52% 51%, 52% 51%);
+  }
+  100% {
+    clip-path: polygon(0 0, 52% 49%, 52% 51%, 0 100%);
+  }
+}
+
+@keyframes slowlyDisplayTriangle2 {
+  0%   {
+    clip-path: polygon(72% 45%, 72% 45%, 72% 55%, 72% 55%);
+  }
+  100% {
+    clip-path: polygon(0 0, 72% 45%, 72% 55%, 0 100%);
+  }
+}
+
+@keyframes slowlyDisplayGlowingPanel {
+  0%   {
+    clip-path: polygon(100% 0%, 100% 0%, 100% 100%, 100% 100%);
+  }
+  
+  50%   {
+    clip-path: polygon(100% 0%, 100% 0%, 100% 100%, 100% 100%);
+  }
+  
+  100% {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+  }
+}
+
+
+@keyframes slowlyDisplayTriangleRight {
+  0%   {
+    clip-path: polygon(52% 49%, 52% 49%, 52% 51%, 52% 51%);
+  }
+  100% {
+    clip-path: polygon(100% 0, 52% 49%, 52% 51%, 100% 100%);
+  }
+}
+
+@keyframes slowlyDisplayTriangleRight2 {
+  0%   {
+    clip-path: polygon(28% 45%, 28% 45%, 28% 55%, 28% 55%);
+  }
+  100% {
+    clip-path: polygon(100% 0, 28% 45%, 28% 55%, 100% 100%);
+  }
+}
+
+@keyframes slowlyDisplayGlowingPanelRight {
+  0%   {
+    clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%);
+  }
+  
+  50%   {
+    clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%);
+  }
+  
+  100% {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+  }
+}
+
 
 
 @media  (min-width: 320px) and (max-width: 1024px) {
