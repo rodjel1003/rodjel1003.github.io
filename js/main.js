@@ -124,3 +124,5 @@ $(".email").on("click", function() {
 	M.toast({html: "Email Address <span class='glow2'>&nbsp;" + copyEmailAddress.value + "&nbsp;</span> copied to clipboard", classes: 'rounded'});
 });
 
+M.AutoInit();
+
