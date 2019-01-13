@@ -663,9 +663,21 @@ body {
 }
 
 .card {
-	background-color: #0E0B16;
+	background-color: rgba(14, 11, 22, 0.5);
 }
 
+.tabs {
+	/* background-color: rgba(231, 223, 221, 0.5); */
+	background-color: rgba(71, 23, 246, 0.5);
+}
+
+.tabs .tab a,
+.tabs .tab a:hover,
+.tabs .tab a.active {
+	/* background-color: rgba(231, 223, 221, 0.5); */
+	background-color: rgba(71, 23, 246, 0.5);
+	color: #FFFFFF;
+}
 
 @media  (min-width: 320px) and (max-width: 1024px) {
   
