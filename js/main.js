@@ -47,7 +47,7 @@ $(".portfolio")
 
 			}, 2000, function() {
 				// Animation complete.
-//				$(".portfolio").hide();
+				$(".portfolio").hide();
 				$(".glowing-container-right").css("display", "flex");
 			});
 		});
