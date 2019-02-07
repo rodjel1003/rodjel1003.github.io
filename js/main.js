@@ -14,8 +14,15 @@ $(".about-me")
 			$(".about-me").addClass("btn-hover");
 
 			$(".about-me").css("transform", "translate(-50%, -50%)");
+			let bodyWidth = $("body").width();
+			let left;
+			if(bodyWidth >= 320 && bodyWidth <= 1024) {
+				left = "98%";
+			} else {
+				left = "75%";
+			}
 			$(".about-me").animate({
-				left : "75%",
+				left : left,
 				top : "50%",
 
 			}, 2000, function() {
@@ -41,8 +48,15 @@ $(".portfolio")
 			$(".portfolio").addClass("btn-hover");
 
 			$(".portfolio").css("transform", "translate(-50%, -50%)");
+			let bodyWidth = $("body").width();
+			let right;
+			if(bodyWidth >= 320 && bodyWidth <= 1024) {
+				right = "86%";
+			} else {
+				right = "75%";
+			}
 			$(".portfolio").animate({
-				right : "75%",
+				right : right,
 				top : "50%",
 
 			}, 2000, function() {
