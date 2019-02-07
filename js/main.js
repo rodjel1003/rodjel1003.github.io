@@ -42,7 +42,7 @@ $(".portfolio")
 
 			$(".portfolio").css("transform", "translate(-50%, -50%)");
 			$(".portfolio").animate({
-				left : "25%",
+				right : "75%",
 				top : "50%",
 
 			}, 2000, function() {
@@ -65,12 +65,21 @@ $(".close-button-left")
 			$(".about-me").css("transform", "translateY(-50%)");
 			$(".glowing-container-left").css("display", "none");
 			$(".about-me").show();
+			let bodyWidth = $("body").width();
+			let left;
+			if(bodyWidth >= 320 && bodyWidth <= 1024) {
+				left = "15%";
+			} else {
+				left = "30%";
+			}
+
 			$(".about-me").animate({
-				left : "30%",
+				left : left,
 				top : "50%",
 
 			}, 2000, function() {
 				// Animation complete.
+				$(".about-me").css("right", "unset");
 				$(".linkedin").fadeIn(1000);
 				$(".email").fadeIn(1000);
 				$(".facebook").fadeIn(1000);
@@ -91,8 +100,15 @@ $(".close-button-right")
 			$(".portfolio").css("transform", "translateY(-50%)");
 			$(".glowing-container-right").css("display", "none");
 			$(".portfolio").show();
+			let bodyWidth = $("body").width();
+			let right;
+			if(bodyWidth >= 320 && bodyWidth <= 1024) {
+				right = "15%";
+			} else {
+				right = "30%";
+			}
 			$(".portfolio").animate({
-				left: "65%",
+				right: right,
 				top : "50%",
 
 			}, 2000, function() {
