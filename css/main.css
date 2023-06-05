@@ -95,6 +95,10 @@ body {
 	animation: float 6s ease-in-out infinite;
 }
 
+.btn-floating i{
+	color: #000;
+}
+
 
 @keyframes float {
 	0% {
@@ -118,13 +122,13 @@ body {
 @keyframes glowingButton {
 	0% {
 		box-shadow: inset 0 0 50px #fff,
-		    inset 20px 0 80px #4717F6,
-		    inset -20px 0 80px #A239CA,
-		    inset 20px 0 300px #4717F6,
-		    inset -20px 0 300px #A239CA,
+		    inset 20px 0 80px #cfc4f8,
+		    inset -20px 0 80px #cfc4f8,
+		    inset 20px 0 300px #cfc4f8,
+		    inset -20px 0 300px #cfc4f8,
 		    0 0 50px #fff,
-		    -10px 0 80px #4717F6,
-		    10px 0 80px #A239CA;
+		    -10px 0 80px #cfc4f8,
+		    10px 0 80px #cfc4f8;
 		background-color: transparent;
 	}
 	50% {
@@ -135,19 +139,19 @@ body {
 		    inset 20px 0 300px #fff,
 		    inset -20px 0 300px #fff,
 		    0 0 50px #fff,
-		    -10px 0 80px #4717F6,
-		    10px 0 80px #A239CA;
+		    -10px 0 80px #cfc4f8,
+		    10px 0 80px #cfc4f8;
 		background-color: #fff;
 	}
 	100% {
 		box-shadow: inset 0 0 50px #fff,
-		    inset 20px 0 80px #4717F6,
-		    inset -20px 0 80px #A239CA,
-		    inset 20px 0 300px #4717F6,
-		    inset -20px 0 300px #A239CA,
+		    inset 20px 0 80px #cfc4f8,
+		    inset -20px 0 80px #cfc4f8,
+		    inset 20px 0 300px #cfc4f8,
+		    inset -20px 0 300px #cfc4f8,
 		    0 0 50px #fff,
-		    -10px 0 80px #4717F6,
-		    10px 0 80px #A239CA;
+		    -10px 0 80px #cfc4f8,
+		    10px 0 80px #cfc4f8;
 		background-color: transparent;
 	}
 }
@@ -160,81 +164,74 @@ body {
 .btn:active {
 	 box-shadow:
 	    inset 0 0 50px #fff,
-	    inset 20px 0 80px #4717F6,
-	    inset -20px 0 80px #A239CA,
-	    inset 20px 0 300px #4717F6,
-	    inset -20px 0 300px #A239CA,
+	    inset 20px 0 80px #fff,
+	    inset -20px 0 80px #fff,
+	    inset 20px 0 300px #fff,
+	    inset -20px 0 300px #fff,
 	    0 0 50px #fff,
-	    -10px 0 80px #4717F6,
-	    10px 0 80px #A239CA;
+	    -10px 0 80px #fff,
+	    10px 0 80px #fff;
 	    animation-play-state: paused;
 }
 
 .btn-hover {
 	box-shadow:
 	    inset 0 0 50px #fff,
-	    inset 20px 0 80px #4717F6,
-	    inset -20px 0 80px #A239CA,
-	    inset 20px 0 300px #4717F6,
-	    inset -20px 0 300px #A239CA,
+	    inset 20px 0 80px #fff,
+	    inset -20px 0 80px #fff,
+	    inset 20px 0 300px #fff,
+	    inset -20px 0 300px #fff,
 	    0 0 50px #fff,
-	    -10px 0 80px #4717F6,
-	    10px 0 80px #A239CA;
+	    -10px 0 80px #fff,
+	    10px 0 80px #fff;
 }
 
 .primary-photo {
-	height: 200px !important;
-	width: 200px;
-	box-shadow:
-		    inset 0 0 6px #fff,
-		    inset 2px 0 10px #4717F6,
-		    inset -2px 0 10px #A239CA,
-		    inset 2px 0 37px #4717F6,
-		    inset -2px 0 37px #A239CA,
-		    0 0 6px #fff,
-		    -1px 0 10px #4717F6,
-		    1px 0 10px #A239CA;    
+	height: 50%;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-40%, 0%);
 }
 
 .linkedin {
-	top: 15%;
-	left: 40%;
+	top: 5%;
+	left: 28%;
 }
 
 .about-me {
-	top: 50%;
-/* 	transform: translateY(-50%); */
-	left: 30%;
+	top: 5%;
+	left: 14%;
 }
 
 .email {
-	bottom: 15%;
-	left: 40%;
+	top: 5%;
+	left: 42%;
 }
 
 .facebook {
-	top: 15%;
-	right: 40%;
+	top: 5%;
+	right: 28%;
 }
 
 .portfolio {
-	top: 50%;
-	/* transform: translateY(-50%); */
-	right: 30%;
+	top: 5%;
+	right: 14%;
 }
 
 .phone {
-	bottom: 15%;
-	right: 40%;
+	top: 5%;
+	right: 42%;
 }
 
 .introduction {
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
 	text-align: center;
-	position: fixed;
-	color: #FFFFFF;
+	position: absolute;
+	color: #000000;
+  top: 45%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
 }
 
 .glow {
@@ -249,27 +246,8 @@ body {
   animation: glow2 1s ease-in-out infinite alternate;
 }
 
-@-webkit-keyframes glow {
-  from {
-    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #0E0B16, 0 0 20px #0E0B16, 0 0 25px #0E0B16, 0 0 30px #0E0B16, 0 0 35px #0E0B16;
-  }
-  to {
-    text-shadow: 0 0 10px #fff, 0 0 15px #4717F6, 0 0 20px #4717F6, 0 0 25px #4717F6, 0 0 30px #4717F6, 0 0 35px #4717F6, 0 0 40px #4717F6;
-  }
-}
-
-@-webkit-keyframes glow2 {
-  from {
-    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #0E0B16, 0 0 20px #0E0B16, 0 0 25px #0E0B16, 0 0 30px #0E0B16, 0 0 35px #0E0B16;
-  }
-  to {
-    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #fff, 0 0 25px #fff, 0 0 30px #fff, 0 0 35px #fff;
-  }
-}
-
 .glowing-container-left {
     display: none;
-    /* position: fixed; */
     z-index: 3;
   
 }
@@ -279,18 +257,18 @@ body {
   width: 50vw;
   padding: 50px;
   overflow-y: auto;
-  color: #FFFFFF;
+  color: #000000;
   background-color: rgba(0,0,0,0.5);
   box-shadow:
     inset 0 0 25px #fff,
-    inset 10px 0 40px #4717F6,
-    inset -10px 0 40px #A239CA,
-    inset 10px 0 150px #4717F6,
-    inset -10px 0 150px #A239CA,
+    inset 10px 0 40px #cfc4f8,
+    inset -10px 0 40px #fff,
+    inset 10px 0 150px #cfc4f8,
+    inset -10px 0 150px #fff,
     0 0 25px #fff,
-    -5px 0 40px #4717F6,
-    5px 0 40px #A239CA;
-  animation: slowlyDisplayGlowingPanel 3s ease-out;
+    -5px 0 40px #cfc4f8,
+    5px 0 40px #fff;
+  animation: slowlyDisplayGlowingPanel 0.5s ease-out;
   z-index: 6;
 }
 
@@ -306,15 +284,9 @@ body {
   opacity: 0.3;
   padding-top: 50px;
   padding-bottom: 50px;
-  background-color: #4717F6;
+  background-color: #fff;
   clip-path: polygon(0 0, 52% 49%, 52% 51%, 0 100%);
-  /* box-shadow:
-    inset 0 0 600px #fff,
-    inset 240px 0 960px #4717F6,
-    inset -240px 0 960px #A239CA,
-    inset 240px 0 3600px #4717F6,
-    inset -240px 0 3600px #A239CA; */
-    animation: slowlyDisplayTriangle 1.5s ease-in;
+    animation: slowlyDisplayTriangle 0.25s ease-in;
   
 }
 
@@ -331,14 +303,8 @@ body {
   padding-bottom: 50px;
   opacity: 0.3;
   clip-path: polygon(0 0, 75% 49%, 75% 51%, 0 100%);
-  background-color: #4717F6;
-  /* box-shadow:
-    inset 0 0 800px #fff,
-    inset 320px 0 1280px #4717F6,
-    inset -320px 0 1280px #A239CA,
-    inset 320px 0 4800px #4717F6,
-    inset -320px 0 4800px #A239CA; */
-    animation: slowlyDisplayTriangle2 3s ease-in-out;
+  background-color: #fff;
+    animation: slowlyDisplayTriangle2 0.5s ease-in-out;
   
 }
 
@@ -355,21 +321,21 @@ body {
   border-radius: 50%;
   box-shadow:
     inset 0 0 50px #fff,
-    inset 20px 0 80px #4717F6,
-    inset -20px 0 80px #A239CA,
-    inset 20px 0 300px #4717F6,
-    inset -20px 0 300px #A239CA,
+    inset 20px 0 80px #cfc4f8,
+    inset -20px 0 80px #fff,
+    inset 20px 0 300px #cfc4f8,
+    inset -20px 0 300px #fff,
     0 0 50px #fff,
-    -10px 0 80px #4717F6,
-    10px 0 80px #A239CA;
-    animation: glowingButton 6s ease-in-out infinite;
+    -10px 0 80px #cfc4f8,
+    10px 0 80px #fff;
+    animation: glowingButton 0.5s ease-in-out infinite;
 }
 
 .glowing-container-left .close-button {
   position: absolute;
   top: 0;
   right: 0;
-  color: #ffffff;
+  color: #000000;
   cursor: pointer;
   height: 30px;
   width: 30px;
@@ -377,48 +343,48 @@ body {
   border: solid 1px #FFFFFF;
   box-shadow:
     inset 0 0 50px #fff,
-    inset 20px 0 80px #4717F6,
-    inset -20px 0 80px #A239CA,
-    inset 20px 0 300px #4717F6,
-    inset -20px 0 300px #A239CA,
+    inset 20px 0 80px #cfc4f8,
+    inset -20px 0 80px #fff,
+    inset 20px 0 300px #cfc4f8,
+    inset -20px 0 300px #fff,
     0 0 50px #fff,
-    -10px 0 80px #4717F6,
-    10px 0 80px #A239CA;
+    -10px 0 80px #cfc4f8,
+    10px 0 80px #fff;
 }
 
 @keyframes glowingPanel {
   0%   {
     box-shadow:
     inset 0 0 25px #fff,
-    inset 10px 0 40px #4717F6,
-    inset -10px 0 40px #A239CA,
-    inset 10px 0 150px #4717F6,
-    inset -10px 0 150px #A239CA,
+    inset 10px 0 40px #cfc4f8,
+    inset -10px 0 40px #fff,
+    inset 10px 0 150px #cfc4f8,
+    inset -10px 0 150px #fff,
     0 0 25px #fff,
-    -5px 0 40px #4717F6,
-    5px 0 40px #A239CA;
+    -5px 0 40px #cfc4f8,
+    5px 0 40px #fff;
   }
   50%  {
     box-shadow:
     inset 0 0 25px #fff,
-    inset 10px 0 40px #A239CA,
+    inset 10px 0 40px #fff,
     inset -10px 0 40px #4717F6,
-    inset 10px 0 150px #A239CA,
+    inset 10px 0 150px #fff,
     inset -10px 0 150px #4717F6,
     0 0 25px #fff,
-    -5px 0 40px #A239CA,
+    -5px 0 40px #fff,
     5px 0 40px #4717F6;
   }
   100% {
     box-shadow:
     inset 0 0 25px #fff,
-    inset 10px 0 40px #4717F6,
-    inset -10px 0 40px #A239CA,
-    inset 10px 0 150px #4717F6,
-    inset -10px 0 150px #A239CA,
+    inset 10px 0 40px #cfc4f8,
+    inset -10px 0 40px #fff,
+    inset 10px 0 150px #cfc4f8,
+    inset -10px 0 150px #fff,
     0 0 25px #fff,
-    -5px 0 40px #4717F6,
-    5px 0 40px #A239CA;
+    -5px 0 40px #cfc4f8,
+    5px 0 40px #fff;
   }
 }
 
@@ -426,7 +392,7 @@ body {
 *::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
     border-radius: 10px;
-    background-color: #4717F6;
+    background-color: #FFF;
 }
 
 *::-webkit-scrollbar {
@@ -437,7 +403,7 @@ body {
 *::-webkit-scrollbar-thumb {
     border-radius: 10px;
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-    background-color: #fff;
+    background-color: #7c88f3;
 }
 
 
@@ -453,18 +419,18 @@ body {
   width: 50vw;
   padding: 50px;
   overflow-y: auto;
-  color: #FFFFFF;
+  color: #000000;
   background-color: rgba(0,0,0,0.5);
   box-shadow:
     inset 0 0 25px #fff,
-    inset 10px 0 40px #4717F6,
-    inset -10px 0 40px #A239CA,
-    inset 10px 0 150px #4717F6,
-    inset -10px 0 150px #A239CA,
+    inset 10px 0 40px #cfc4f8,
+    inset -10px 0 40px #fff,
+    inset 10px 0 150px #cfc4f8,
+    inset -10px 0 150px #fff,
     0 0 25px #fff,
-    -5px 0 40px #4717F6,
-    5px 0 40px #A239CA;
-  animation: slowlyDisplayGlowingPanelRight 3s ease-out;
+    -5px 0 40px #cfc4f8,
+    5px 0 40px #fff;
+  animation: slowlyDisplayGlowingPanelRight 0.5s ease-out;
   z-index: 6;
 }
 
@@ -480,14 +446,8 @@ body {
   padding-bottom: 50px;
   opacity: 0.3;
   clip-path: polygon(100% 0, 52% 49%, 52% 51%, 100% 100%);
-  background-color: #4717F6;
-  /* box-shadow:
-    inset 0 0 400px #fff,
-    inset 160px 0 640px #4717F6,
-    inset -160px 0 640px #A239CA,
-    inset 160px 0 2400px #4717F6,
-    inset -160px 0 2400px #A239CA; */
-    animation: slowlyDisplayTriangleRight 1.5s ease-in;
+  background-color: #fff;
+    animation: slowlyDisplayTriangleRight 0.25s ease-in;
   
 }
 
@@ -504,14 +464,8 @@ body {
   padding-bottom: 50px;
   opacity: 0.3;
   clip-path: polygon(100% 0, 25% 49%, 25% 51%, 100% 100%);
-  background-color: #4717F6;
-  /* box-shadow:
-    inset 0 0 800px #fff,
-    inset 320px 0 1280px #4717F6,
-    inset -320px 0 1280px #A239CA,
-    inset 320px 0 4800px #4717F6,
-    inset -320px 0 4800px #A239CA; */
-    animation: slowlyDisplayTriangleRight2 3s ease-in-out;
+  background-color: #fff;
+    animation: slowlyDisplayTriangleRight2 0.5s ease-in-out;
 }
 
 .glowing-container-right .glowing-button {
@@ -527,21 +481,21 @@ body {
   border-radius: 50%;
   box-shadow:
     inset 0 0 50px #fff,
-    inset 20px 0 80px #4717F6,
-    inset -20px 0 80px #A239CA,
-    inset 20px 0 300px #4717F6,
-    inset -20px 0 300px #A239CA,
+    inset 20px 0 80px #cfc4f8,
+    inset -20px 0 80px #fff,
+    inset 20px 0 300px #cfc4f8,
+    inset -20px 0 300px #fff,
     0 0 50px #fff,
-    -10px 0 80px #4717F6,
-    10px 0 80px #A239CA;
-    animation: glowingButton 6s ease-in-out infinite;
+    -10px 0 80px #cfc4f8,
+    10px 0 80px #fff;
+    animation: glowingButton 0.5s ease-in-out infinite;
 }
 
 .glowing-container-right .close-button {
   position: absolute;
   top: 0;
   right: 0;
-  color: #ffffff;
+  color: #000000;
   cursor: pointer;
   height: 30px;
   width: 30px;
@@ -549,13 +503,13 @@ body {
   border: solid 1px #FFFFFF;
   box-shadow:
     inset 0 0 50px #fff,
-    inset 20px 0 80px #4717F6,
-    inset -20px 0 80px #A239CA,
-    inset 20px 0 300px #4717F6,
-    inset -20px 0 300px #A239CA,
+    inset 20px 0 80px #cfc4f8,
+    inset -20px 0 80px #fff,
+    inset 20px 0 300px #cfc4f8,
+    inset -20px 0 300px #fff,
     0 0 50px #fff,
-    -10px 0 80px #4717F6,
-    10px 0 80px #A239CA;
+    -10px 0 80px #cfc4f8,
+    10px 0 80px #fff;
 }
 
 #phoneNumber,
@@ -565,31 +519,32 @@ body {
 }
 
 .toast {
-  color: #FFFFFF;
+  color: #000000;
   background-color: transparent;
   box-shadow:
     inset 0 0 6px #fff,
-    inset 2px 0 10px #4717F6,
-    inset -2px 0 10px #A239CA,
-    inset 2px 0 37px #4717F6,
-    inset -2px 0 37px #A239CA,
+    inset 2px 0 10px #cfc4f8,
+    inset -2px 0 10px #fff,
+    inset 2px 0 37px #cfc4f8,
+    inset -2px 0 37px #fff,
     0 0 6px #fff,
-    -1px 0 10px #4717F6,
-    1px 0 10px #A239CA;
+    -1px 0 10px #cfc4f8,
+    1px 0 10px #fff;
   z-index: 3;
 }
 
 .btn-large,
 .btn-large:hover {
+  color: #000000;
 	box-shadow:
     inset 0 0 6px #fff,
-    inset 2px 0 10px #4717F6,
-    inset -2px 0 10px #A239CA,
-    inset 2px 0 37px #4717F6,
-    inset -2px 0 37px #A239CA,
+    inset 2px 0 10px #cfc4f8,
+    inset -2px 0 10px #fff,
+    inset 2px 0 37px #cfc4f8,
+    inset -2px 0 37px #fff,
     0 0 6px #fff,
-    -1px 0 10px #4717F6,
-    1px 0 10px #A239CA;
+    -1px 0 10px #cfc4f8,
+    1px 0 10px #fff;
 }
 
 @keyframes slowlyDisplayTriangle {
@@ -663,20 +618,19 @@ body {
 }
 
 .card {
-	background-color: rgba(14, 11, 22, 0.5);
+	background-color: #ffffff48;
 }
 
 .tabs {
-	/* background-color: rgba(231, 223, 221, 0.5); */
-	background-color: rgba(71, 23, 246, 0.5);
+	background-color: #b4c3f1;
 }
 
 .tabs .tab a,
 .tabs .tab a:hover,
 .tabs .tab a.active {
 	/* background-color: rgba(231, 223, 221, 0.5); */
-	background-color: rgba(71, 23, 246, 0.5);
-	color: #FFFFFF;
+	background-color: #FFFFFF;
+	color: #000000;
 }
 
 @media  (min-width: 320px) and (max-width: 1024px) {

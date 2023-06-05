@@ -2,7 +2,6 @@ $(".about-me")
 .on(
 		"click",
 		function() {
-//			 $(".about-me").css("animation-play-state", "paused");
 			$(".linkedin").fadeOut(1000);
 			$(".email").fadeOut(1000);
 			$(".facebook").fadeOut(1000);
@@ -25,8 +24,7 @@ $(".about-me")
 				left : left,
 				top : "50%",
 
-			}, 2000, function() {
-				// Animation complete.
+			}, 500, function() {
 				$(".about-me").hide();
 				$(".glowing-container-left").css("display", "flex");
 			});
@@ -36,7 +34,6 @@ $(".portfolio")
 .on(
 		"click",
 		function() {
-			// $(".about-me").css("animation-play-state", "paused");
 			$(".linkedin").fadeOut(1000);
 			$(".email").fadeOut(1000);
 			$(".facebook").fadeOut(1000);
@@ -59,8 +56,7 @@ $(".portfolio")
 				right : right,
 				top : "50%",
 
-			}, 2000, function() {
-				// Animation complete.
+			}, 500, function() {
 				$(".portfolio").hide();
 				$(".glowing-container-right").css("display", "flex");
 			});
@@ -71,7 +67,6 @@ $(".close-button-left")
 .on(
 		"click",
 		function() {
-			// $(".about-me").css("animation-play-state", "paused");
 
 
 			$(".about-me").addClass("btn-floating");
@@ -79,19 +74,12 @@ $(".close-button-left")
 			$(".about-me").css("transform", "translateY(-50%)");
 			$(".glowing-container-left").css("display", "none");
 			$(".about-me").show();
-			let bodyWidth = $("body").width();
-			let left;
-			if(bodyWidth >= 320 && bodyWidth <= 1024) {
-				left = "15%";
-			} else {
-				left = "30%";
-			}
 
 			$(".about-me").animate({
-				left : left,
-				top : "50%",
+				left : "14%",
+				top : "5%",
 
-			}, 2000, function() {
+			}, 500, function() {
 				// Animation complete.
 				$(".about-me").css("right", "unset");
 				$(".linkedin").fadeIn(1000);
@@ -114,18 +102,11 @@ $(".close-button-right")
 			$(".portfolio").css("transform", "translateY(-50%)");
 			$(".glowing-container-right").css("display", "none");
 			$(".portfolio").show();
-			let bodyWidth = $("body").width();
-			let right;
-			if(bodyWidth >= 320 && bodyWidth <= 1024) {
-				right = "15%";
-			} else {
-				right = "30%";
-			}
 			$(".portfolio").animate({
-				right: right,
-				top : "50%",
+				right: "14%",
+				top : "5%",
 
-			}, 2000, function() {
+			}, 500, function() {
 				// Animation complete.
 				$(".portfolio").css("left", "unset");
 				$(".linkedin").fadeIn(1000);
